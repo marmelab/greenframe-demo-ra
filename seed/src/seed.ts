@@ -11,6 +11,7 @@ const sql = postgres({
 });
 
 const initData = async () => {
+  console.log("Inserting data...");
   // check if there is already data in the database
   const exisingCustomers = await sql`SELECT * FROM customers`;
   if (exisingCustomers.length > 0) {
