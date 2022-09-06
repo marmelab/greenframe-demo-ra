@@ -1,0 +1,45 @@
+version: "3"
+
+services:
+  db:
+    image: postgres:12
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+  front:
+    working_dir: /app
+    image: node:17
+    ports:
+      - 3000:3000
+    volumes:
+      - ./front:/app
+    depends_on:
+      - api
+    command: "yarn start"
+    user: "${UID}:${GID}"
+  api:
+    image: postgrest/postgrest
+    ports:
+      - 8000:3000
+    depends_on:
+      - db
+    volumes:
+      - ./db/postgrest.conf:/postgres.conf
+    command: postgrest /postgres.conf
+    environment:
+      - PGRST_DB_URI=postgres://authenticator:mysecretpassword@db:5432/postgres
+  seed:
+    working_dir: /app
+    image: node:17
+    ports:
+      - 3000:3000
+    depends_on:
+      - db
+    volumes:
+      - ./seed:/app
+    user: "${UID}:${GID}"
