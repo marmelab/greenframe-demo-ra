@@ -1,0 +1,11 @@
+scenarios:
+  - path: "./scenarios.js"
+    name: "Login"
+    threshold: 0.03
+baseURL: "http://localhost:3000"
+projectName: "greenframe-demo-ra"
+containers:
+  - "front"
+  - "api"
+databaseContainers:
+  - "db"
