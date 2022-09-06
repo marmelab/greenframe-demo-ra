@@ -5,7 +5,7 @@ scenarios:
 baseURL: "http://localhost:3000"
 projectName: "greenframe-demo-ra"
 containers:
-  - "front"
-  - "api"
+  - "greenframe-demo-ra_front_1"
+  - "greenframe-demo-ra_api_1"
 databaseContainers:
-  - "db"
+  - "greenframe-demo-ra_db_1"
