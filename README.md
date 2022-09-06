@@ -3,6 +3,9 @@
 
 A demo project to demonstrate greenframe integration with github.
 
+The project is composed of a front end ([React admin](https://marmelab.com/react-admin/)) and a backend ([Postgrest](https://postgrest.org/)) connected to a db in Postgres.
+![Greenframe demo architecture](archi-greenframe-demo-ra.png)
+
 ## Getting started
 
 ### Install dependencies
