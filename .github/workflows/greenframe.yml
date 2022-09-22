@@ -1,4 +1,8 @@
-on: [pull_request]
+on:
+  push:
+    branches:
+      - master
+  pull_request: {}
 
 jobs:
   greenframe_action_workflow:
