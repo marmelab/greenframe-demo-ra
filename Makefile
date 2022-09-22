@@ -8,7 +8,7 @@ help:
 
 install: ## Install dependencies, and seed the database
 	docker-compose run --rm seed yarn
-	$(MAKE) seed
+	docker-compose run --rm seed ./node_modules/.bin/ts-node ./src/seed.ts
 	docker-compose run --rm front yarn
 
 start:

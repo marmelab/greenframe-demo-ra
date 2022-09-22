@@ -25,3 +25,7 @@ Go to http://localhost:3000 to see the app.
 ### Stop the project
 
 Run `make stop` to stop the server. It will remove the containers, so the data will be lost.
+
+### Making a PR
+
+Testing Greenframe integration with github.
