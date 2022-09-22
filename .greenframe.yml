@@ -1,5 +1,5 @@
 scenarios:
-  - path: "./scenarios.js"
+  - path: "./scenario.js"
     name: "Login"
     threshold: 0.03
 baseURL: "http://localhost:3000"
