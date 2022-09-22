@@ -7,7 +7,7 @@ on:
 jobs:
   greenframe_action_workflow:
     runs-on: ubuntu-latest
-    name: Run a GreenFrame CLI Action
+    name: GreenFrame
     steps:
       # To use this repository's private action,
       # you must check out the repository
