@@ -9,6 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     name: GreenFrame
     steps:
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
       # To use this repository's private action,
       # you must check out the repository
       - name: Checkout
