@@ -29,3 +29,11 @@ Run `make stop` to stop the server. It will remove the containers, so the data w
 ### Making a PR
 
 Testing Greenframe integration with github.
+
+## Analyzing the Project with Greenframe
+
+The repository contains a `.greenframe.yml` and a `scenario.js` file, so all you need to do to run an analysis is to run:
+
+```sh
+$ greenframe analyze
+```
