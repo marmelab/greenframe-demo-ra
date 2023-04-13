@@ -26,7 +26,7 @@ import Aside from "./Aside";
 const ProductList = () => {
   const getResourceLabel = useGetResourceLabel();
   const isSmall = useMediaQuery<Theme>((theme) => theme.breakpoints.down("md"));
-  // artificial delay
+  // Artificial delay
   for (let i = 0; i < 50000; i++) {
     console.log(i);
   }
