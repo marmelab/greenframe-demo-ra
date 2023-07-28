@@ -16,8 +16,8 @@ Run `make install` to install the dependencies. It will also init and seed the d
 
 Run `make start` to start the server. It will start :
 
-- The db (postgres) on port 5432
-- The api (using postgrest) on port 8000
+- The DB (postgres) on port 5432
+- The API (using postgrest) on port 8000
 - The frontend (React admin) on port 3000
 
 Go to http://localhost:3000 to see the app.
